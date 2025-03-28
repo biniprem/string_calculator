@@ -16,12 +16,16 @@ RSpec.describe StringCalculation do
             expect(add("2,4,6,5")).to eq(17)
         end
 
-        it "returns sum of numbers if contains new lines between numbers" do
+        it 'returns sum of numbers if contains new lines between numbers' do
             expect(add("5\n6,4")).to eq(15)
         end
 
-        it "return sum if different delimiters contains in the string" do
+        it 'return sum if different delimiters contains in the string' do
             expect(add("//;\n1;2")).to eq(3)
+        end
+
+        it 'return error message for negative numbers' do
+            expect { add("2,-4,6,-8") }.to eq("negative numbers not allowed -4,-8")
         end
     end
 end

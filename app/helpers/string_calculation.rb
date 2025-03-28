@@ -10,6 +10,12 @@ module StringCalculation
         end
         numbers = numbers.gsub("\n" , delimiter)
         number_list = numbers.split(delimiter).map(&:to_i)
-        number_list.sum
+        negative_numbers = number_list.select { |num| num < 0 }
+        
+        if negative_numbers.empty?
+            number_list.sum
+        else
+            "negative numbers not allowed #{negative_numbers.join(',')}"
+        end        
     end
 end
