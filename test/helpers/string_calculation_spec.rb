@@ -5,7 +5,11 @@ RSpec.describe StringCalculation do
         end
 
         it 'returns the same number for a single number' do
-            expect(add("")).to eq(0)
+            expect(add("2")).to eq(2)
+        end
+
+        it 'returns the sumof two numbers' do
+            expect(add("2,4")).to eq(6)
         end
     end
 end
