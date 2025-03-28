@@ -15,5 +15,9 @@ RSpec.describe StringCalculation do
         it 'returns the sum of multiple numbers' do
             expect(add("2,4,6,5")).to eq(17)
         end
+
+        it "returns sum of numbers if contains new lines between numbers" do
+            expect(add("5\n6,4")).to eq(15)
+          end
     end
 end
