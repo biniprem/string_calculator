@@ -18,6 +18,10 @@ RSpec.describe StringCalculation do
 
         it "returns sum of numbers if contains new lines between numbers" do
             expect(add("5\n6,4")).to eq(15)
-          end
+        end
+
+        it "return sum if different delimiters contains in the string" do
+            expect(add("//;\n1;2")).to eq(3)
+        end
     end
 end
