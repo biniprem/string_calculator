@@ -2,8 +2,8 @@ class StringsOperationsController < ApplicationController
     include StringCalculation
 
     def add_strings
-        numbers="1,-2,3,-4"
-        result = add(numbers) 
+        numbers="//;\n1;2"
+        result = StringCalculation.add(numbers) 
         render plain: result
     end
 end

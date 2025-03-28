@@ -1,5 +1,5 @@
 module StringCalculation
-    def add(numbers)
+    def self.add(numbers)
         return 0 if numbers.empty?
 
         delimiter = ','
