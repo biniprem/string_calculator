@@ -8,8 +8,12 @@ RSpec.describe StringCalculation do
             expect(add("2")).to eq(2)
         end
 
-        it 'returns the sumof two numbers' do
+        it 'returns the sum of two numbers' do
             expect(add("2,4")).to eq(6)
+        end
+
+        it 'returns the sum of multiple numbers' do
+            expect(add("2,4,6,5")).to eq(17)
         end
     end
 end
